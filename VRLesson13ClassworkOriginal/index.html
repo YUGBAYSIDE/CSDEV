@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene light="defaultLightsEnabled: false" >
+		<a-assets>
+			<img id="grass" src="texture_grass.jpeg">
+			<img id="rock" src="texture_rock.jpeg">
+			<img id="sand" src="texture_sand.jpeg">
+			<img id="snow" src="texture_snow.jpeg">
+			<img id="bk1" src="bk1.jpeg">
+			<img id="bk2" src="bk2.jpeg">
+		</a-assets>
+
+      <!-- Task 1: Using the color attribute make the following tree look better -->
+      <a-sphere position="0 4 -5" radius="1.25" color="#77fc03"></a-sphere>
+      <a-sphere position="-1 3 -5" radius="1.25" color="#77fc03"></a-sphere>
+      <a-sphere position="1 3 -5" radius="1.25" color="#77fc03"></a-sphere>
+      <a-cylinder position="0 0.75 -5" radius="0.5" color="#b55d1f" height="3.5"></a-cylinder>
+
+     <!-- Task 2: Using one of the texture images make the plane look like the ground.  Don't forget to repeat the image if it looks blurred. -->
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="50" height="50" src="#grass" repeat="10 10" ></a-plane>
+
+      <!-- Task 3: Using either the sky or bk images, change the sky component -->
+      <a-sky src="#bk2"></a-sky>
+	    <a-light type="ambient" color="#445451"></a-light>
+		<a-light type="point" intensity="1" position="-6.5 5 4"></a-light>
+		
+		<a-entity geometry="primitive: cone; vertices: 1 1 -3, 3 1 -3, 2 2 -3"></a-entity>
+    </a-scene>
+  </body>
+</html>
