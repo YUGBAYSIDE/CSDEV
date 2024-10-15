@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <img src="rock.jpg" id="rock">
+        <img src="lava1.jpg" id="fire">
+      </a-assets>
+      <a-dodecahedron src="#rock" position="0 2 -5" side="double"></a-dodecahedron>
+      <a-plane src="#fire" rotation="-90 0 0" width="30" height="30" side="double"></a-plane>
+      <a-sky color="black"></a-sky>
+    </a-scene>
+  </body>
+</html>
