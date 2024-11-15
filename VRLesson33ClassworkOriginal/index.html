@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="rocket.js"></script>
+    <script src="script.js"></script>
+  </head>
+<body >
+      <a-scene>
+        <a-assets>
+          <img src="silver-textured-sheet-metal-texture.jpg" id="metalTexture"/>
+        </a-assets>
+        <a-entity id="rocketTemplate">
+          <a-cone radius-top="0" radius-bottom="0.5" height="1" color="red" position="0 0 -2"></a-cone>
+        <a-cylinder radius="0.5" height="2" color="gray" position="0 -1.5 -2"></a-cylinder>
+        <a-cone radius-top="0" radius-bottom="0.25" height="2.5" color="orange" position="0 -3 -2" rotation="-180 0 0"></a-cone>
+          </a-entity>
+
+        <a-plane src="#metalTexture" width="40" height="40" rotation="90 0 0" side="double" repeat="10 10"></a-plane>
+
+        <a-plane src="#metalTexture" width="40" height="40" rotation="90 0 0" side="double" repeat="10 10"></a-plane>
+
+        <a-camera position="0 2 0">
+          <a-cursor></a-cursor>
+        </a-camera>
+        
+      </a-scene>
+
+    </body>
+</html>
